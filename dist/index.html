@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29809205-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-29809205-5');
+</script>
+
+	<meta charset="UTF-8">
+	<title>Shadertoy simulation</title>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+
+
+<form id="frm1" style="display: none">
+URL: <input type="text" id="ulrLinkinput" name="urllink" value="https://www.shadertoy.com/view/3l23Rh" size="50">
+	
+	<input type="button" onclick="myFunction()" value="Submit">
+Note this uses <a href="https://www.shadertoy.com/api">ShaderToy.Com API </a>
+</form>
+  
+  <script>
+  function myFunction() {
+	  document.getElementById("frm1").submit();
+  }
+  </script>
+
+	<script src="js/three.bundle.js"></script>
+	
+</html>
