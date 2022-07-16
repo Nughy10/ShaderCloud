@@ -21,6 +21,7 @@
 </head>
 <body>
 
+<div id="shaderFilter"></div>
 
 <form id="frm1" style="display: none">
 URL: <input type="text" id="ulrLinkinput" name="urllink" value="https://www.shadertoy.com/view/3l23Rh" size="50">
@@ -29,12 +30,23 @@ URL: <input type="text" id="ulrLinkinput" name="urllink" value="https://www.shad
 Note this uses <a href="https://www.shadertoy.com/api">ShaderToy.Com API </a>
 </form>
   
-  <script>
+<script>
   function myFunction() {
 	  document.getElementById("frm1").submit();
   }
-  </script>
+</script>
 
-	<script src="js/three.bundle.js"></script>
+<script src="js/three.bundle.js"></script>
+
+<script> 
+	const params = new URLSearchParams(window.location.search);
+	const color = params.get("color");
+	console.log(color);
+	document.getElementById("shaderFilter").style.position="absolute"; 
+	document.getElementById("shaderFilter").style.backgroundColor=color; 
+	document.getElementById("shaderFilter").style.width="100%";
+	document.getElementById("shaderFilter").style.height="100%";
+	document.getElementById("shaderFilter").style.opacity="0.5";
+</script>
 	
 </html>

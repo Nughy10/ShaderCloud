@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import OrbitControls from 'three-orbitcontrols'
+// import OrbitControls from 'three-orbitcontrols'
 import ShaderToyMaterial from 'three-shadertoy-material'
 import ShaderToyMaterialLoader from  'three-shadertoy-material-loader'
 import shaderToySample from './shaders/shadertoySample.frag'
@@ -44,7 +44,7 @@ function init() {
         10000
     )
     camera.position.z = 1000
-    geometry = new THREE.PlaneBufferGeometry(2500, 1750);
+    geometry = new THREE.PlaneBufferGeometry(3500, 1700);
     material = new ShaderToyMaterial(shaderToySample);
 
     mesh = new THREE.Mesh(geometry, material)
@@ -75,7 +75,7 @@ function init() {
     renderer = new THREE.WebGLRenderer({ antialias: true })
     renderer.setSize(window.innerWidth, window.innerHeight)
     document.body.appendChild(renderer.domElement)
-    controls = new OrbitControls(camera, renderer.domElement);
+    // controls = new OrbitControls(camera, renderer.domElement);
 }
 
 function animate() {
